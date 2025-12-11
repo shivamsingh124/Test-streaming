@@ -17,12 +17,12 @@ function createDummyPDF() {
 
   // Fill rest with zeros
   const chunk = Buffer.alloc(1024 * 1024); // 1MB at a time
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 400; i++) {
     fs.writeSync(fd, chunk);
   }
 
   fs.closeSync(fd);
-  console.log("Generated 1000MB dummy PDF");
+  console.log("Generated 400MB dummy PDF");
 }
 
 createDummyPDF();
